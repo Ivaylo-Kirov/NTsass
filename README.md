@@ -1,0 +1,1 @@
+Uses node-sass to watch and compile from scss/main.scss into dist/css/main.css - next step is mixins and functions like easeOut and expanding 'tree inheritance structure' within the scss
