@@ -1,2 +1,17 @@
+// This should store variables, mixins, and functions
+
 $primary-color: #000;
 $secondary-color: #999;
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #333;
+    } @else {
+        @return #999;
+    }
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

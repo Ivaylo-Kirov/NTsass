@@ -1,8 +1,11 @@
 @import 'config';
+@import 'utilities';
 
 body {
-    background-color: $primary-color;
-    color: $secondary-color;
+    // the @include here basically copy/pastes the set-background @mixin
+    // in turn, the set-background @mixin itself calls a @function to check 'lightness()' score of what you pass
+    // and based on that score also sets the 'color' style
+    @include set-background(#333);
 }
 
 nav {
@@ -19,4 +22,14 @@ nav {
       padding: 6px 12px;
       text-decoration: none;
     }
+}
+
+.dropdown-button {
+  @include set-background($secondary-color);
+
+  // double line comments don't get parsed and included in the dist css
+  // & is a parent selector and super useful for these kinds of pseudo class definitions
+  &:hover {
+    @include set-background($primary-color);
+  }
 }

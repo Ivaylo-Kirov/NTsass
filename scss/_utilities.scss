@@ -1,0 +1,11 @@
+// This should store utility classes
+
+.bg {
+    &-primary {
+        @include set-background($primary-color);
+    }
+
+    &-secondary {
+        @include set-background($secondary-color);
+    }
+}
