@@ -5,7 +5,7 @@ body {
     // the @include here basically copy/pastes the set-background @mixin
     // in turn, the set-background @mixin itself calls a @function to check 'lightness()' score of what you pass
     // and based on that score also sets the 'color' style
-    @include set-background(#333);
+    @include set-background(#333); // the set-background function sets both the background as well as text color and figures out what to do based on the "lightness"
 }
 
 nav {

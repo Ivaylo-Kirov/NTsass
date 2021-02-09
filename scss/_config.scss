@@ -12,6 +12,7 @@ $secondary-color: #999;
 }
 
 @mixin set-background($color) {
+    // mixin basically means that in any other file I can now say include set-background and it will work
     background-color: $color;
     color: set-text-color($color);
 }
